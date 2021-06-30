@@ -26,11 +26,18 @@ SECTIONS
 		_stext = .;
 		*(.text)
 	}
-
-	. = ALIGN(0x1000);
-	stack_top = .;
-	. = . + 0x1000;
-
+	.data : {
+		*(.data)
+		. = ALIGN(0x1000);
+		stack_top = .;
+		. = . + 0x4000;
+	}
+	.bss : {
+		*(.bss)
+	}
+	.rodata : {
+		*(.rodata)
+	}
 	_end = .;
 
 	kernel_offset = TEXT_OFFSET;

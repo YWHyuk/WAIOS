@@ -1,14 +1,12 @@
 #include "uart.h"
+#include "printk.h"
 
-void start_kernel(){
-	char buffer[] = "Hello world!\n";
+void start_kernel()
+{
+	char *buffer = "Hello world!";
 	init_uart();
 
-	for(int i=0; i<13;i++){
-		putchar(buffer[i]);
-	}
-	while(1){
-		putchar(getchar());
-	}
+	printk("%s %d\n", buffer, 1);
+	while(1);
 }
 
