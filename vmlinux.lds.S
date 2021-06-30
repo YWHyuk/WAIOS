@@ -42,6 +42,9 @@ SECTIONS
 	.rodata : {
 		*(.rodata)
 	}
+	.debug : {
+		*(.debug)
+	}
 	_end = .;
 
 	kernel_offset = TEXT_OFFSET;
