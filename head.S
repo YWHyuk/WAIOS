@@ -15,5 +15,4 @@ _head:
 text:
 	adrp	x1, stack_top
 	mov	sp, x1
-loop:
-	b	loop
+	b	start_kernel

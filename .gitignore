@@ -1,0 +1,4 @@
+Image
+vmlinux
+vmlinux.lds
+*.o
