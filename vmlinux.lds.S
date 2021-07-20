@@ -29,8 +29,8 @@ SECTIONS
 	.data : {
 		*(.data)
 		. = ALIGN(0x1000);
-		stack_top = .;
 		. = . + 0x4000;
+		stack_top = .;
 	}
 	.bss : {
 		*(.bss)
