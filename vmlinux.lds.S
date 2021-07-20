@@ -31,6 +31,10 @@ SECTIONS
 		. = ALIGN(0x1000);
 		. = . + 0x4000;
 		stack_top = .;
+                init_pg_dir = .;
+                . = . + 0x3000;
+                idmap_pg_dir = .;
+                . = . + 0x3000;
 	}
 	.bss : {
 		*(.bss)

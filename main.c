@@ -3,10 +3,9 @@
 
 void start_kernel()
 {
-	char *buffer = "Hello world!";
 	init_uart();
 
-	printk("%s %d\n", buffer, 1);
+	printk("[%s] %s %d", __func__, "Hello world!", 1);
 	while(1);
 }
 
