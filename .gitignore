@@ -1,4 +1,7 @@
 Image
 vmlinux
+vmlinux2
 vmlinux.lds
+source.c
+scripts/kallsyms
 *.o
